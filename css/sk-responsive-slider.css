@@ -1,0 +1,154 @@
+@keyframes sk__responsive_slide_in_left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sk__responsive_slide_in_right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sk__responsive_slide_out_right {
+    0% {
+        transform: translateX(0);
+    }
+    99% {
+        transform: translateX(100%);
+    }
+    100% {
+        display: none;
+    }
+}
+
+@keyframes sk__responsive_slide_out_left {
+    0% {
+        transform: translateX(0);
+    }
+    99% {
+        transform: translateX(-100%);
+    }
+    100% {
+        display: none;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.sk__responsive__slider {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    width: 100%;
+}
+
+.sk__responsive__slider .sk__responsive__slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0);
+    display: none;
+}
+
+.sk__responsive__slider .sk__responsive__slide .sk__responsive__slide_content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sk__responsive__slider .sk__responsive__slide img {
+    object-fit: cover;
+}
+
+.sk__responsive__slider .sk__responsive__slide.sk__responsive__active_out_left {
+    animation: sk__responsive_slide_out_left 0.5s ease-in-out 1 forwards;
+    display: flex;
+}
+
+.sk__responsive__slider .sk__responsive__slide.sk__responsive__active_out_right {
+    animation: sk__responsive_slide_out_right 0.5s ease-in-out 1 forwards;
+    display: flex;
+}
+
+.sk__responsive__slider .sk__responsive__slide.sk__responsive__active_in_left {
+    display: flex;
+    animation: sk__responsive_slide_in_left 0.5s ease-in-out 1 forwards ;
+}
+
+.sk__responsive__slider .sk__responsive__slide.sk__responsive__active_in_right {
+    display: flex;
+    animation: sk__responsive_slide_in_right 0.5s ease-in-out 1 forwards;
+}
+
+.sk__responsive__slider .sk__responsive__next_slide, .sk__responsive__slider .sk__responsive__prev_slide {
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    top: 0;
+    font-size: 50px;
+    border: none;
+    background: transparent
+}
+
+.sk__responsive__slider .sk__responsive__next_slide {
+    right: 0;
+}
+.sk__responsive_slider .sk__responsive__prev_slide {
+    left: 0;
+}
+
+.sk__responsive__slider .sk__responsive__next_slide:hover,
+.sk__responsive__slider .sk__responsive__prev_slide:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.sk__responsive__slider .sk__responsive__dots {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sk__responsive__slider .sk__responsive__dots .sk__responsive__dot {
+    width: 15px;
+    height: 15px;
+    background: #999;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.sk__responsive__slider .sk__responsive__dots .sk__responsive__dot.sk__responsive__active {
+    background: #333;
+}
+
+.sk__responsive__slider .sk__responsive__dots .sk__responsive__dot:hover {
+    background: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .sk__responsive__slider .sk__responsive__next_slide,
+    .sk__responsive__slider .sk__responsive__prev_slide {
+        display: none;
+    }
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/sk-responsive-slider.css" rel="stylesheet" />
+    <title>Sk Responsive Slider Demo - Autoplay</title>
+  </head>
+  <body>
+    <!-- slider 1 demo -->
+    <h2 align="center">Example with autoplay & loop</h2>
+    <div class="slider-1">
+      <div class="slide">
+        <img src="https://picsum.photos/300/300" alt="" />
+        <h2>Slide 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/300/300" alt="" />
+        <h2>Slide 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/300/300" alt="" />
+        <h2>Slide 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/300/300" alt="" />
+        <h2>Slide 4</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+      </div>
+    </div>
+  </body>
+  <!-- import our custom built slider library / component -->
+  <script src="../js/sk-responsive-slider.js"></script>
+  <script>
+    // initialization of both sliders
+    const slider = new SkResponsiveSlider({
+      slider: ".slider-1",
+      slide: ".slide",
+      autoPlay: true,
+      delay: 2000,
+      loop: true,
+      showArrows: true,
+      showDots: true,
+    });
+  </script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/sk-responsive-slider.css" rel="stylesheet" />
+    <title>Sk Responsive Slider Demo - Autoplay</title>
+  </head>
+  <body>
+    <!-- slider 2 demo -->
+    <h2 align="center">Example without autoplay & loop</h2>
+    <div class="slider-2">
+      <div class="slide">
+        <h2>Slide 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+        <button>Call for action 1</button>
+      </div>
+      <div class="slide">
+        <h2>Slide 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+        <button>Call for action 2</button>
+      </div>
+      <div class="slide">
+        <h2>Slide 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+        <button>Call for action 3</button>
+      </div>
+      <div class="slide">
+        <h2>Slide 4</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+        <button>Call for action 4</button>
+      </div>
+      <div class="slide">
+        <h2>Slide 5</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+        <button>Call for action 5</button>
+      </div>
+      <div class="slide">
+        <h2>Slide 6</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+        <button>Call for action 6</button>
+      </div>
+    </div>
+  </body>
+  <!-- import our custom built slider library / component -->
+  <script src="../js/sk-responsive-slider.js"></script>
+  <script>
+    const slider = new SkResponsiveSlider({
+      slider: ".slider-2",
+      slide: ".slide",
+      autoPlay: false,
+      loop: false,
+      showArrows: true,
+      showDots: true,
+    });
+  </script>
+</html>
